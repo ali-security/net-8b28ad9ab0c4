@@ -1,6 +1,7 @@
 name: seal-build
 
-on: [push, workflow_dispatch]
+on:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -61,3 +62,4 @@ jobs:
         run: |
           set -eux
           go test ./...
+    timeout-minutes: 40
